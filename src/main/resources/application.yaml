@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: restaurant-pos-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/restaurant_pos
+    username: ${DB_USERNAME:pos_user}
+    password: ${DB_PASSWORD:}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    show-sql: false
+
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: UTC
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+    expiration-ms: ${JWT_EXPIRATION_MS:28800000}
+
+logging:
+  level:
+    com.restaurant.pos: INFO
+    org.hibernate.SQL: WARN
