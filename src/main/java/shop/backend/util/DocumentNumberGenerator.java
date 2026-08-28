@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * Uses a per-JVM atomic counter seeded per day; the actual DB UNIQUE constraint on each
  * *_number column is the real safety net across concurrent POS terminals — if two terminals
  * race and collide, the insert fails fast and the caller retries with a fresh number.
+ * we will come later to here
  */
 @Component
 public class DocumentNumberGenerator {
