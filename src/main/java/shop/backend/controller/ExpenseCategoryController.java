@@ -1,15 +1,15 @@
 package shop.backend.controller;
 
-import com.restaurant.pos.common.ApiResponse;
-import com.restaurant.pos.dto.request.ExpenseCategoryRequest;
-import com.restaurant.pos.dto.response.ExpenseCategoryResponse;
-import com.restaurant.pos.service.ExpenseCategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import shop.backend.comman.ApiResponse;
+import shop.backend.dto.request.ExpenseCategoryRequest;
+import shop.backend.dto.response.ExpenseCategoryResponse;
+import shop.backend.service.ExpenseCategoryService;
 
 import java.util.List;
 

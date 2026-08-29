@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${db.host:localhost}:${db.port:5432}/${db.name:restaurant_pos}
+    username: ${db.username}
+    password: ${db.password}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    show-sql: false

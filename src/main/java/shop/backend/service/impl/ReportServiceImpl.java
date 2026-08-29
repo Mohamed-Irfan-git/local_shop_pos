@@ -123,7 +123,7 @@ public class ReportServiceImpl implements ReportService {
             BigDecimal totalGrn = grnRepository.sumConfirmedTotalBySupplier(supplier.getId());
             BigDecimal totalPaid = supplierPaymentRepository.sumActiveTotalBySupplier(supplier.getId());
             long grnCount = grnRepository.findBySupplierIdAndStatus(supplier.getId(),
-                    com.restaurant.pos.entity.enums.GrnStatus.CONFIRMED).size();
+                    shop.backend.entity.enums.GrnStatus.CONFIRMED).size();
 
             return SupplierReportResponse.builder()
                     .supplierId(supplier.getId())
